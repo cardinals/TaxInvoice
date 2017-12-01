@@ -1,0 +1,11 @@
+D:\GitHub\TaxInvoice\TaxInvoice\ControlLib\bin\Debug\ControlLib.dll
+D:\GitHub\TaxInvoice\TaxInvoice\ControlLib\bin\Debug\ControlLib.pdb
+D:\GitHub\TaxInvoice\TaxInvoice\ControlLib\obj\Debug\Themes\Generic.baml
+D:\GitHub\TaxInvoice\TaxInvoice\ControlLib\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\GitHub\TaxInvoice\TaxInvoice\ControlLib\obj\Debug\ControlLib_MarkupCompile.cache
+D:\GitHub\TaxInvoice\TaxInvoice\ControlLib\obj\Debug\ControlLib_MarkupCompile.lref
+D:\GitHub\TaxInvoice\TaxInvoice\ControlLib\obj\Debug\Themes\ButtonStyle.baml
+D:\GitHub\TaxInvoice\TaxInvoice\ControlLib\obj\Debug\ControlLib.g.resources
+D:\GitHub\TaxInvoice\TaxInvoice\ControlLib\obj\Debug\ControlLib.dll
+D:\GitHub\TaxInvoice\TaxInvoice\ControlLib\obj\Debug\ControlLib.pdb
+D:\GitHub\TaxInvoice\TaxInvoice\ControlLib\obj\Debug\ControlLib.csprojResolveAssemblyReference.cache

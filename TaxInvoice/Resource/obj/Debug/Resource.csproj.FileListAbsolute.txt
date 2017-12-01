@@ -1,10 +1,10 @@
 D:\GitHub\TaxInvoice\TaxInvoice\Resource\bin\Debug\Resource.dll
 D:\GitHub\TaxInvoice\TaxInvoice\Resource\bin\Debug\Resource.pdb
-D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.csprojResolveAssemblyReference.cache
-D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.dll
-D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.pdb
-D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.g.resources
 D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource_MarkupCompile.cache
 D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource_MarkupCompile.lref
 D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Style\FontSizeStyle.baml
 D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Style\TextBlockStyle.baml
+D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.g.resources
+D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.dll
+D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.pdb
+D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Style\ButtonStyle.baml

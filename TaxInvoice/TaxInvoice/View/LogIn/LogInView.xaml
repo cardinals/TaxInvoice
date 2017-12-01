@@ -4,31 +4,51 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TaxInvoice.View.LogIn"
+             xmlns:controls="clr-namespace:ControlLib.Controls;assembly=ControlLib"
              mc:Ignorable="d" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen"
              d:DesignHeight="400" d:DesignWidth="602" Width="602" Height="400">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Resource;component/Style/TextBlockStyle.xaml"/>
+                <ResourceDictionary Source="/Resource;component/Style/ButtonStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            <!--登录输入框背景图片样式-->
             <Style x:Key="LogInImageStyle" TargetType="Image">
                 <Setter Property="Width" Value="195"/>
                 <Setter Property="Height" Value="31"/>
                 <Setter Property="Margin" Value="0,5"/>
                 <Setter Property="HorizontalAlignment" Value="Left"/>
             </Style>
+            <!--登录输入框样式-->
+            <Style x:Key="LogInTextBoxStyle" TargetType="TextBox">
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Width" Value="145"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Margin" Value="45,0,0,0"/>
+                <Setter Property="FontSize" Value="{StaticResource ContentFontSize}"/>
+            </Style>
+            <!--登录输入框样式-->
+            <Style x:Key="LogInComboBoxStyle" TargetType="ComboBox">
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Width" Value="145"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Margin" Value="45,0,0,0"/>
+                <Setter Property="FontSize" Value="{StaticResource ContentFontSize}"/>
+            </Style>
         </ResourceDictionary>
     </Window.Resources>
-    <Border BorderBrush="Red" BorderThickness="1">
+    <Border BorderBrush="#FF45B9F1" BorderThickness="1">
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Image Source="/Resource;component/Images/LogIn/login_bg1.jpg" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+            <Button Width="30" Height="30" Style="{DynamicResource CloseButtonStyle}" Click="Button_Click"/>
             <Grid Grid.Row="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -39,11 +59,23 @@
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Text="BPN" Style="{StaticResource H_R_ContentTextBlockStyle}"/>
+                <TextBlock Text="BPN:" Style="{StaticResource H_R_ContentTextBlockStyle}"/>
                 <Image Grid.Row="0" Grid.Column="1" Source="/Resource;component/Images/LogIn/login_edit2.png" Style="{StaticResource LogInImageStyle}"/>
+                <TextBox Grid.Column="1"  Style="{StaticResource LogInTextBoxStyle}"/>
+                <TextBlock Grid.Row="1" Text="Username:" Style="{StaticResource H_R_ContentTextBlockStyle}"/>
                 <Image Grid.Row="1" Grid.Column="1" Source="/Resource;component/Images/LogIn/login_edit2.png" Style="{StaticResource LogInImageStyle}"/>
+                <ComboBox Grid.Row="1" Grid.Column="1" Style="{StaticResource LogInComboBoxStyle}" IsEditable="True"/>
+                <TextBlock Grid.Row="2" Text="Password:" Style="{StaticResource H_R_ContentTextBlockStyle}"/>
                 <Image Grid.Row="2" Grid.Column="1" Source="/Resource;component/Images/LogIn/login_edit3.png" Style="{StaticResource LogInImageStyle}"/>
+                <TextBox Grid.Row="2" Grid.Column="1"  Style="{StaticResource LogInTextBoxStyle}"/>
             </Grid>
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,30,0,0">
+                <controls:ImageButton NormalImage="/Resource;component/Images/LogIn/login_ok1.png" Width="116" Height="36"
+                                      MouseOverImage="/Resource;component/Images/LogIn/login_ok2.png" Margin="0,0,40,0"/>
+                <controls:ImageButton NormalImage="/Resource;component/Images/LogIn/login_exit1.png" Width="116" Height="36"
+                                      MouseOverImage="/Resource;component/Images/LogIn/login_exit2.png"
+                                      Click="Button_Click"/>
+            </StackPanel>
         </Grid>
     </Border>
 </Window>
