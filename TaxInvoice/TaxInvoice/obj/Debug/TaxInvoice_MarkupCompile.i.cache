@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\
+E:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\
 TaxInvoice
 none
 false
 DEBUG;TRACE
-D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\App.xaml
+E:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\App.xaml
 2-1820516741
 
-14-1222344416
-711120093422
+141956139324
+7184227976
 MainWindow.xaml;View\LogIn\LogInView.xaml;
 
-False
+True
 

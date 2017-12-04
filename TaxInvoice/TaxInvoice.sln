@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxInvoice", "TaxInvoice\TaxInvoice.csproj", "{FA93A56D-B426-4079-ABD0-A8D491681375}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlLib", "ControlLib\ControlLib.csproj", "{53843311-9178-40C2-AD0B-F609DE60C7CA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpLib", "HttpLib\HttpLib.csproj", "{28A9C023-3E39-46C0-9012-25A1CF17A462}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLib", "CommonLib\CommonLib.csproj", "{2BAAEE4E-1B94-4EF4-B2B3-A16D6212277D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,8 +35,15 @@ Global
 		{28A9C023-3E39-46C0-9012-25A1CF17A462}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28A9C023-3E39-46C0-9012-25A1CF17A462}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28A9C023-3E39-46C0-9012-25A1CF17A462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BAAEE4E-1B94-4EF4-B2B3-A16D6212277D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BAAEE4E-1B94-4EF4-B2B3-A16D6212277D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BAAEE4E-1B94-4EF4-B2B3-A16D6212277D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BAAEE4E-1B94-4EF4-B2B3-A16D6212277D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A4A3B7D-C81F-4CB5-AD7C-73F511DC0FC5}
 	EndGlobalSection
 EndGlobal
