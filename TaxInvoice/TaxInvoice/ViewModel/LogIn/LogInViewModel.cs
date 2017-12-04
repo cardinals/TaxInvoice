@@ -1,9 +1,11 @@
 ﻿using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace TaxInvoice.ViewModel.LogIn
 {
@@ -51,6 +53,30 @@ namespace TaxInvoice.ViewModel.LogIn
         {
             get { return _password; }
             set { Set<string>(ref _password, value, "Password"); }
+        }
+
+        #endregion
+
+        #region 命令
+        /// <summary>
+        /// 获取或设置
+        /// </summary>
+        private ICommand _logInCommand;
+        /// <summary>
+        /// 获取或设置
+        /// </summary>
+        public ICommand LogInCommand
+        {
+            get
+            {
+                return _logInCommand ?? (_logInCommand = new RelayCommand(() =>
+                {
+
+                }, () =>
+                {
+                    return true;
+                }));
+            }
         }
 
         #endregion

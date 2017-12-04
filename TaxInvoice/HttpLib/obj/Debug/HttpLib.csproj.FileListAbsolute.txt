@@ -1,0 +1,5 @@
+D:\GitHub\TaxInvoice\TaxInvoice\HttpLib\bin\Debug\HttpLib.dll
+D:\GitHub\TaxInvoice\TaxInvoice\HttpLib\bin\Debug\HttpLib.pdb
+D:\GitHub\TaxInvoice\TaxInvoice\HttpLib\obj\Debug\HttpLib.csprojResolveAssemblyReference.cache
+D:\GitHub\TaxInvoice\TaxInvoice\HttpLib\obj\Debug\HttpLib.dll
+D:\GitHub\TaxInvoice\TaxInvoice\HttpLib\obj\Debug\HttpLib.pdb

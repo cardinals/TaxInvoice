@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resource", "Resource\Resour
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlLib", "ControlLib\ControlLib.csproj", "{53843311-9178-40C2-AD0B-F609DE60C7CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpLib", "HttpLib\HttpLib.csproj", "{28A9C023-3E39-46C0-9012-25A1CF17A462}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{53843311-9178-40C2-AD0B-F609DE60C7CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53843311-9178-40C2-AD0B-F609DE60C7CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53843311-9178-40C2-AD0B-F609DE60C7CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28A9C023-3E39-46C0-9012-25A1CF17A462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28A9C023-3E39-46C0-9012-25A1CF17A462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28A9C023-3E39-46C0-9012-25A1CF17A462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28A9C023-3E39-46C0-9012-25A1CF17A462}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
