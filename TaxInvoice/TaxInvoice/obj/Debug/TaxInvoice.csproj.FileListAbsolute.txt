@@ -69,3 +69,7 @@ E:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\TaxInvoice.csproj.GenerateR
 E:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\TaxInvoice.csproj.CoreCompileInputs.cache
 E:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\TaxInvoice.exe
 E:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\TaxInvoice.pdb
+D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\bin\Debug\Newtonsoft.Json.dll
+D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\bin\Debug\Newtonsoft.Json.xml
+D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\HomeView\HomeView.g.cs
+D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\HomeView\HomeView.baml
