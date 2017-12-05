@@ -10,7 +10,6 @@ D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.pdb
 D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Style\ButtonStyle.baml
 E:\GitHub\TaxInvoice\TaxInvoice\Resource\bin\Debug\Resource.dll
 E:\GitHub\TaxInvoice\TaxInvoice\Resource\bin\Debug\Resource.pdb
-E:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.csprojResolveAssemblyReference.cache
 E:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource_MarkupCompile.cache
 E:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource_MarkupCompile.lref
 E:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Style\FontSizeStyle.baml

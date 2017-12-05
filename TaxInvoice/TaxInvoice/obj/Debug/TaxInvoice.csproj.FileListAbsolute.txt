@@ -73,3 +73,7 @@ D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\bin\Debug\Newtonsoft.Json.dll
 D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\bin\Debug\Newtonsoft.Json.xml
 D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\HomeView\HomeView.g.cs
 D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\HomeView\HomeView.baml
+E:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\bin\Debug\Newtonsoft.Json.dll
+E:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\bin\Debug\Newtonsoft.Json.xml
+E:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\HomeView\HomeView.g.cs
+E:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\HomeView\HomeView.baml

@@ -4,7 +4,7 @@
 library
 C#
 .cs
-D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\
+E:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\
 Resource
 none
 false
@@ -12,9 +12,9 @@ DEBUG;TRACE
 
 3-1690298862
 
-51897293310
+5780809754
 13-1142990016
 Style\FontSizeStyle.xaml;Style\ButtonStyle.xaml;Style\TextBlockStyle.xaml;
 
-False
+True
 

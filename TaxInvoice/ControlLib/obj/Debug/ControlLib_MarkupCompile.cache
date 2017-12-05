@@ -4,17 +4,17 @@
 library
 C#
 .cs
-D:\GitHub\TaxInvoice\TaxInvoice\ControlLib\obj\Debug\
+E:\GitHub\TaxInvoice\TaxInvoice\ControlLib\obj\Debug\
 ControlLib
 none
 false
 DEBUG;TRACE
 
-2-724383689
+32124513152
 
-21159980360
+31344901755
 13-1142990016
-Themes\ButtonStyle.xaml;Themes\Generic.xaml;
+Themes\ToggleButtonStyle.xaml;Themes\ButtonStyle.xaml;Themes\Generic.xaml;
 
 False
 
