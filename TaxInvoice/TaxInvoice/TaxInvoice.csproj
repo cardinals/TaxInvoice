@@ -81,10 +81,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\Common\HttpModel.cs" />
+    <Compile Include="ViewModel\Home\HomeViewModel.cs" />
     <Compile Include="ViewModel\LogIn\LogInViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
-    <Compile Include="View\HomeView\HomeView.xaml.cs">
+    <Compile Include="View\Content\IssuingView.xaml.cs">
+      <DependentUpon>IssuingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Home\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\LogIn\LogInView.xaml.cs">
@@ -102,7 +106,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\HomeView\HomeView.xaml">
+    <Page Include="View\Content\IssuingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Home\HomeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

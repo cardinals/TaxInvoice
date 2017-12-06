@@ -77,6 +77,99 @@
     <Resource Include="Images\Home\yh_tx1.png" />
     <Resource Include="Images\Home\zjmleftbj.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Issuing\c1.png" />
+    <Resource Include="Images\Issuing\c2.png" />
+    <Resource Include="Images\Issuing\cd_fpbd1.png" />
+    <Resource Include="Images\Issuing\cd_fpbd2.png" />
+    <Resource Include="Images\Issuing\cd_fpbl1.png" />
+    <Resource Include="Images\Issuing\cd_fpbl2.png" />
+    <Resource Include="Images\Issuing\cd_fptk1.png" />
+    <Resource Include="Images\Issuing\cd_fptk2.png" />
+    <Resource Include="Images\Issuing\d1.png" />
+    <Resource Include="Images\Issuing\d2.png" />
+    <Resource Include="Images\Statistics\cd_cxtj0.png" />
+    <Resource Include="Images\Statistics\cd_cxtj1.png" />
+    <Resource Include="Images\Statistics\cd_cxtj2.png" />
+    <Resource Include="Images\Management\cd_fpgl0.png" />
+    <Resource Include="Images\Management\cd_fpgl1.png" />
+    <Resource Include="Images\Management\cd_fpgl2.png" />
+    <Resource Include="Images\Issuing\cd_fpkj0.PNG" />
+    <Resource Include="Images\Issuing\cd_fpkj1.PNG" />
+    <Resource Include="Images\Issuing\cd_fpkj2.png" />
+    <Resource Include="Images\Product\cd_spgl0.png" />
+    <Resource Include="Images\Product\cd_spgl1.png" />
+    <Resource Include="Images\Product\cd_spgl2.png" />
+    <Resource Include="Images\System\cd_xtgl0.png" />
+    <Resource Include="Images\System\cd_xtgl1.png" />
+    <Resource Include="Images\System\cd_xtgl2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Home\in_but1_1.png" />
+    <Resource Include="Images\Home\in_but1_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Home\in_but1_11.png" />
+    <Resource Include="Images\Home\in_but2_1.png" />
+    <Resource Include="Images\Home\in_but2_2.png" />
+    <Resource Include="Images\Home\in_but3_1.png" />
+    <Resource Include="Images\Home\in_but3_2.png" />
+    <Resource Include="Images\Home\in_but4_1.png" />
+    <Resource Include="Images\Home\in_but4_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Management\cd_kyfacl1.png" />
+    <Resource Include="Images\Management\cd_kyfacl2.png" />
+    <Resource Include="Images\Management\cd_ylfpdr1.png" />
+    <Resource Include="Images\Management\cd_ylfpdr2.png" />
+    <Resource Include="Images\Management\cd_ylfpth1.png" />
+    <Resource Include="Images\Management\cd_ylfpth2.png" />
+    <Resource Include="Images\Management\fpgl_zdgp1.png" />
+    <Resource Include="Images\Management\fpgl_zdgp2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Home\inlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Statistics\cd_fpcy1.png" />
+    <Resource Include="Images\Statistics\cd_fpcy2.png" />
+    <Resource Include="Images\Statistics\cd_kjcx1.png" />
+    <Resource Include="Images\Statistics\cd_kjcx2.png" />
+    <Resource Include="Images\Statistics\cxtj_khtj1.png" />
+    <Resource Include="Images\Statistics\cxtj_khtj2.png" />
+    <Resource Include="Images\Statistics\jbxxwh1.png" />
+    <Resource Include="Images\Statistics\jbxxwh2.png" />
+    <Resource Include="Images\Statistics\jyxm1.png" />
+    <Resource Include="Images\Statistics\jyxm2.png" />
+    <Resource Include="Images\Statistics\spjxcbb1.png" />
+    <Resource Include="Images\Statistics\spjxcbb2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Product\spgl_spkc1.png" />
+    <Resource Include="Images\Product\spgl_spkc2.png" />
+    <Resource Include="Images\Product\spgl_spxg1.png" />
+    <Resource Include="Images\Product\spgl_spxg2.png" />
+    <Resource Include="Images\Product\spgl_spxx1.png" />
+    <Resource Include="Images\Product\spgl_spxx2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\System\cd_dyjsz1.png" />
+    <Resource Include="Images\System\cd_dyjsz2.png" />
+    <Resource Include="Images\System\cd_khxxwh1.png" />
+    <Resource Include="Images\System\cd_khxxwh2.png" />
+    <Resource Include="Images\System\cd_kpxxwh1.png" />
+    <Resource Include="Images\System\cd_kpxxwh2.png" />
+    <Resource Include="Images\System\cd_kpygl1.png" />
+    <Resource Include="Images\System\cd_kpygl2.png" />
+    <Resource Include="Images\System\cd_mmgl1.png" />
+    <Resource Include="Images\System\cd_mmgl2.png" />
+    <Resource Include="Images\System\cd_sjbf1.png" />
+    <Resource Include="Images\System\cd_sjbf2.png" />
+    <Resource Include="Images\System\cd_sjhf1.png" />
+    <Resource Include="Images\System\cd_sjhf2.png" />
+    <Resource Include="Images\System\xtgl_logo1.png" />
+    <Resource Include="Images\System\xtgl_logo2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

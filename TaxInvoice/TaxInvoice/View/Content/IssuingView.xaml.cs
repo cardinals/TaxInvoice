@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TaxInvoice.View.HomeView
+namespace TaxInvoice.View.Content
 {
     /// <summary>
-    /// HomeView.xaml 的交互逻辑
+    /// IssuingView.xaml 的交互逻辑
     /// </summary>
-    public partial class HomeView : Window
+    public partial class IssuingView : UserControl
     {
-        public HomeView()
+        public IssuingView()
         {
             InitializeComponent();
         }

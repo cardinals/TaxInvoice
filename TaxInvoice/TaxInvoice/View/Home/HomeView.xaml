@@ -1,0 +1,246 @@
+﻿<Window x:Class="TaxInvoice.View.Home.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TaxInvoice.View.Home"
+             xmlns:controls="clr-namespace:ControlLib.Controls;assembly=ControlLib"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="600">
+    <Window.Resources>
+        <Style x:Key="LeftExpanderStyle" TargetType="{x:Type Expander}">
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Expander}">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="3" SnapsToDevicePixels="true">
+                            <DockPanel>
+                                <controls:ImageToggleButton x:Name="HeaderSite" ContentTemplate="{TemplateBinding HeaderTemplate}"
+                                              ContentTemplateSelector="{TemplateBinding HeaderTemplateSelector}" 
+                                              Content="{TemplateBinding Header}" 
+                                              DockPanel.Dock="Top"
+                                              Foreground="{TemplateBinding Foreground}" 
+                                              FontWeight="{TemplateBinding FontWeight}" 
+                                              FontStyle="{TemplateBinding FontStyle}" 
+                                              FontStretch="{TemplateBinding FontStretch}" 
+                                              FontSize="{TemplateBinding FontSize}" 
+                                              FontFamily="{TemplateBinding FontFamily}" 
+                                              HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                              IsChecked="{Binding IsExpanded, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" 
+                                              MinWidth="0" MinHeight="0" Padding="{TemplateBinding Padding}" 
+                                              VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                <ContentPresenter x:Name="ExpandSite" DockPanel.Dock="Bottom" Focusable="false" 
+                                                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                                  Margin="{TemplateBinding Padding}" Visibility="Collapsed" 
+                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </DockPanel>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsExpanded" Value="true">
+                                <Setter Property="Visibility" TargetName="ExpandSite" Value="Visible"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="{x:Type TreeViewItem}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+            <Setter Property="Padding" Value="1,0,0,0"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TreeViewItem}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.Column="1" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true">
+                                <ContentPresenter x:Name="PART_Header" ContentSource="Header" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                            </Border>
+                            <ItemsPresenter x:Name="ItemsHost" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="VirtualizingPanel.IsVirtualizing" Value="true">
+                    <Setter Property="ItemsPanel">
+                        <Setter.Value>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel/>
+                            </ItemsPanelTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <!--左侧导航栏一级菜单样式-->
+        <Style x:Key="ExpanderImageToggleButtonStyle" TargetType="controls:ImageToggleButton">
+            <Setter Property="Width" Value="202"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.ColumnSpan="2" Background="#FF45B9F1">
+            <Image Source="/Resource;component/Images/Home/inlogo.png" Width="545" Height="58" HorizontalAlignment="Left" Stretch="UniformToFill"/>
+        </Border>
+        <StackPanel Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <controls:ImageButton NormalImage="/Resource;component/Images/Home/in_but1_1.png" Width="110" Height="34"
+                                      MouseOverImage="/Resource;component/Images/Home/in_but1_2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+            <controls:ImageButton NormalImage="/Resource;component/Images/Home/in_but2_1.png" Width="110" Height="34"
+                                      MouseOverImage="/Resource;component/Images/Home/in_but2_2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+            <controls:ImageButton NormalImage="/Resource;component/Images/Home/in_but3_1.png" Width="78" Height="34"
+                                      MouseOverImage="/Resource;component/Images/Home/in_but3_2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+            <controls:ImageButton NormalImage="/Resource;component/Images/Home/in_but4_1.png" Width="110" Height="34"
+                                      MouseOverImage="/Resource;component/Images/Home/in_but4_2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Resource;component/Images/Home/zjmleftbj.png" Stretch="Fill"/>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Image Source="/Resource;component/Images/Home/yh_tx1.png" Width="27" Height="24" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+            <TextBlock Grid.Row="1" Text="Bean Bag Trading(Pvt)Ltd" Margin="18,0,0,0"/>
+            <TreeView Grid.Row="2" Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Hidden" >
+                <Expander IsExpanded="{Binding IsSelected,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=TreeViewItem}}" Style="{DynamicResource LeftExpanderStyle}">
+                    <Expander.Resources>
+                        <Style TargetType="controls:ImageToggleButton" BasedOn="{StaticResource ExpanderImageToggleButtonStyle}">
+                            <Setter Property="NormalImage" Value="/Resource;component/Images/Issuing/cd_fpkj0.PNG"/>
+                            <Setter Property="MouseOverImage" Value="/Resource;component/Images/Issuing/cd_fpkj1.PNG"/>
+                        </Style>
+                    </Expander.Resources>
+                    <StackPanel>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/Issuing/cd_fptk1.png" Width="202" Height="37"
+                                      MouseOverImage="/Resource;component/Images/Issuing/cd_fptk2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/Issuing/c1.png" Width="200" Height="37"
+                                      MouseOverImage="/Resource;component/Images/Issuing/c2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/Issuing/d1.png" Width="200" Height="37"
+                                      MouseOverImage="/Resource;component/Images/Issuing/d2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/Issuing/cd_fpbd1.png" Width="200" Height="37"
+                                      MouseOverImage="/Resource;component/Images/Issuing/cd_fpbd2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/Issuing/cd_fpbl1.png" Width="200" Height="37"
+                                      MouseOverImage="/Resource;component/Images/Issuing/cd_fpbl2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                    </StackPanel>
+                </Expander>
+                <Expander IsExpanded="{Binding IsSelected,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=TreeViewItem}}" Style="{DynamicResource LeftExpanderStyle}">
+                    <Expander.Resources>
+                        <Style TargetType="controls:ImageToggleButton" BasedOn="{StaticResource ExpanderImageToggleButtonStyle}">
+                            <Setter Property="NormalImage" Value="/Resource;component/Images/Management/cd_fpgl0.png"/>
+                            <Setter Property="MouseOverImage" Value="/Resource;component/Images/Management/cd_fpgl1.png"/>
+                        </Style>
+                    </Expander.Resources>
+                    <StackPanel>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/Management/cd_ylfpdr1.png" Width="202" Height="37"
+                                      MouseOverImage="/Resource;component/Images/Management/cd_ylfpdr1.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/Management/cd_ylfpth1.png" Width="200" Height="37"
+                                      MouseOverImage="/Resource;component/Images/Management/cd_ylfpth2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/Management/cd_kyfacl1.png" Width="200" Height="37"
+                                      MouseOverImage="/Resource;component/Images/Management/cd_kyfacl2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/Management/fpgl_zdgp1.png" Width="200" Height="37"
+                                      MouseOverImage="/Resource;component/Images/Management/fpgl_zdgp2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                    </StackPanel>
+                </Expander>
+                <Expander IsExpanded="{Binding IsSelected,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=TreeViewItem}}" Style="{DynamicResource LeftExpanderStyle}">
+                    <Expander.Resources>
+                        <Style TargetType="controls:ImageToggleButton" BasedOn="{StaticResource ExpanderImageToggleButtonStyle}">
+                            <Setter Property="NormalImage" Value="/Resource;component/Images/Statistics/cd_cxtj0.png"/>
+                            <Setter Property="MouseOverImage" Value="/Resource;component/Images/Statistics/cd_cxtj1.png"/>
+                        </Style>
+                    </Expander.Resources>
+                    <StackPanel>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/Statistics/jbxxwh1.png" Width="202" Height="37"
+                                      MouseOverImage="/Resource;component/Images/Statistics/jbxxwh2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/Statistics/jyxm1.png" Width="200" Height="37"
+                                      MouseOverImage="/Resource;component/Images/Statistics/jyxm2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/Statistics/cd_kjcx1.png" Width="200" Height="37"
+                                      MouseOverImage="/Resource;component/Images/Statistics/cd_kjcx2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/Statistics/cd_fpcy1.png" Width="200" Height="37"
+                                      MouseOverImage="/Resource;component/Images/Statistics/cd_fpcy2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/Statistics/spjxcbb1.png" Width="200" Height="37"
+                                      MouseOverImage="/Resource;component/Images/Statistics/spjxcbb2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/Statistics/cxtj_khtj1.png" Width="200" Height="37"
+                                      MouseOverImage="/Resource;component/Images/Statistics/cxtj_khtj2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                    </StackPanel>
+                </Expander>
+                <Expander IsExpanded="{Binding IsSelected,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=TreeViewItem}}" Style="{DynamicResource LeftExpanderStyle}">
+                    <Expander.Resources>
+                        <Style TargetType="controls:ImageToggleButton" BasedOn="{StaticResource ExpanderImageToggleButtonStyle}">
+                            <Setter Property="NormalImage" Value="/Resource;component/Images/Product/cd_spgl0.png"/>
+                            <Setter Property="MouseOverImage" Value="/Resource;component/Images/Product/cd_spgl1.png"/>
+                        </Style>
+                    </Expander.Resources>
+                    <StackPanel>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/Product/spgl_spxx1.png" Width="202" Height="37"
+                                      MouseOverImage="/Resource;component/Images/Product/spgl_spxx2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/Product/spgl_spxg1.png" Width="200" Height="37"
+                                      MouseOverImage="/Resource;component/Images/Product/spgl_spxg2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/Product/spgl_spkc1.png" Width="200" Height="37"
+                                      MouseOverImage="/Resource;component/Images/Product/spgl_spkc2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                    </StackPanel>
+                </Expander>
+                <Expander IsExpanded="{Binding IsSelected,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=TreeViewItem}}" Style="{DynamicResource LeftExpanderStyle}">
+                    <Expander.Resources>
+                        <Style TargetType="controls:ImageToggleButton" BasedOn="{StaticResource ExpanderImageToggleButtonStyle}">
+                            <Setter Property="NormalImage" Value="/Resource;component/Images/System/cd_xtgl0.png"/>
+                            <Setter Property="MouseOverImage" Value="/Resource;component/Images/System/cd_xtgl1.png"/>
+                        </Style>
+                    </Expander.Resources>
+                    <StackPanel>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/System/cd_kpxxwh1.png" Width="202" Height="37"
+                                      MouseOverImage="/Resource;component/Images/System/cd_kpxxwh2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/System/cd_khxxwh1.png" Width="200" Height="37"
+                                      MouseOverImage="/Resource;component/Images/System/cd_khxxwh2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/System/xtgl_logo1.png" Width="200" Height="37"
+                                      MouseOverImage="/Resource;component/Images/System/xtgl_logo2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/System/cd_kpygl1.png" Width="200" Height="37"
+                                      MouseOverImage="/Resource;component/Images/System/cd_kpygl2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/System/cd_mmgl1.png" Width="200" Height="37"
+                                      MouseOverImage="/Resource;component/Images/System/cd_mmgl2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/System/cd_sjbf1.png" Width="200" Height="37"
+                                      MouseOverImage="/Resource;component/Images/System/cd_sjbf2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/System/cd_dyjsz1.png" Width="200" Height="37"
+                                      MouseOverImage="/Resource;component/Images/System/cd_dyjsz2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/System/cd_sjhf1.png" Width="200" Height="37"
+                                      MouseOverImage="/Resource;component/Images/System/cd_sjhf2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
+                    </StackPanel>
+                </Expander>
+            </TreeView>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1" Margin="0,1,0,0">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Resource;component/Images/Home/Contentbg.jpg"/>
+            </Grid.Background>
+            <Frame NavigationUIVisibility="Hidden" Source="/TaxInvoice;component/View/Content/IssuingView.xaml"/>
+        </Grid>
+    </Grid>
+</Window>

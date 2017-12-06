@@ -14,4 +14,8 @@
         <Setter Property="HorizontalAlignment" Value="Right"/>
         <Setter Property="Margin" Value="0,0,10,0"/>
     </Style>
+    <!--水平居右的文本样式-->
+    <Style x:Key="H_C_ContentTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource BaseContentTextBlockStyle}">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
 </ResourceDictionary>
