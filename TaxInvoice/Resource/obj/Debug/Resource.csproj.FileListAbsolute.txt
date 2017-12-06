@@ -19,3 +19,4 @@ E:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.g.resources
 E:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.csproj.CoreCompileInputs.cache
 E:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.dll
 E:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.pdb
+D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.csprojResolveAssemblyReference.cache

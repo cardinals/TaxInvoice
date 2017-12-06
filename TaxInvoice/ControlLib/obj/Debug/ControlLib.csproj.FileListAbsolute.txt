@@ -21,3 +21,4 @@ E:\GitHub\TaxInvoice\TaxInvoice\ControlLib\obj\Debug\ControlLib.csproj.CoreCompi
 E:\GitHub\TaxInvoice\TaxInvoice\ControlLib\obj\Debug\ControlLib.dll
 E:\GitHub\TaxInvoice\TaxInvoice\ControlLib\obj\Debug\ControlLib.pdb
 E:\GitHub\TaxInvoice\TaxInvoice\ControlLib\obj\Debug\Themes\ToggleButtonStyle.baml
+D:\GitHub\TaxInvoice\TaxInvoice\ControlLib\obj\Debug\Themes\ToggleButtonStyle.baml

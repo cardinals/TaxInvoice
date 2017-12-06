@@ -8,26 +8,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Window.Resources>
-        <SolidColorBrush x:Key="Expander.MouseOver.Circle.Stroke" Color="#FF5593FF"/>
-        <SolidColorBrush x:Key="Expander.MouseOver.Circle.Fill" Color="#FFF3F9FF"/>
-        <SolidColorBrush x:Key="Expander.MouseOver.Arrow.Stroke" Color="#FF000000"/>
-        <SolidColorBrush x:Key="Expander.Pressed.Circle.Stroke" Color="#FF3C77DD"/>
-        <SolidColorBrush x:Key="Expander.Pressed.Circle.Fill" Color="#FFD9ECFF"/>
-        <SolidColorBrush x:Key="Expander.Pressed.Arrow.Stroke" Color="#FF000000"/>
-        <SolidColorBrush x:Key="Expander.Disabled.Circle.Stroke" Color="#FFBCBCBC"/>
-        <SolidColorBrush x:Key="Expander.Disabled.Circle.Fill" Color="#FFE6E6E6"/>
-        <SolidColorBrush x:Key="Expander.Disabled.Arrow.Stroke" Color="#FF707070"/>
-        <SolidColorBrush x:Key="Expander.Static.Circle.Fill" Color="#FFFFFFFF"/>
-        <SolidColorBrush x:Key="Expander.Static.Circle.Stroke" Color="#FF333333"/>
-        <SolidColorBrush x:Key="Expander.Static.Arrow.Stroke" Color="#FF333333"/>
-
-        <Style x:Key="ExpanderStyle1" TargetType="{x:Type Expander}">
+        <Style x:Key="LeftExpanderStyle" TargetType="{x:Type Expander}">
             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
             <Setter Property="VerticalContentAlignment" Value="Stretch"/>
             <Setter Property="BorderBrush" Value="Transparent"/>
-            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="0"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Expander}">
@@ -45,7 +33,7 @@
                                               FontFamily="{TemplateBinding FontFamily}" 
                                               HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" 
                                               IsChecked="{Binding IsExpanded, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" 
-                                              Margin="1" MinWidth="0" MinHeight="0" Padding="{TemplateBinding Padding}" 
+                                              MinWidth="0" MinHeight="0" Padding="{TemplateBinding Padding}" 
                                               VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
                                 <ContentPresenter x:Name="ExpandSite" DockPanel.Dock="Bottom" Focusable="false" 
                                                   HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
@@ -62,73 +50,12 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <SolidColorBrush x:Key="ListBorder" Color="#828790"/>
-        <Style x:Key="TreeViewItemFocusVisual">
-            <Setter Property="Control.Template">
-                <Setter.Value>
-                    <ControlTemplate>
-                        <Rectangle/>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <SolidColorBrush x:Key="TreeViewItem.TreeArrow.Static.Checked.Fill" Color="#FF595959"/>
-        <SolidColorBrush x:Key="TreeViewItem.TreeArrow.Static.Checked.Stroke" Color="#FF262626"/>
-        <SolidColorBrush x:Key="TreeViewItem.TreeArrow.MouseOver.Stroke" Color="#FF27C7F7"/>
-        <SolidColorBrush x:Key="TreeViewItem.TreeArrow.MouseOver.Fill" Color="#FFCCEEFB"/>
-        <SolidColorBrush x:Key="TreeViewItem.TreeArrow.MouseOver.Checked.Stroke" Color="#FF1CC4F7"/>
-        <SolidColorBrush x:Key="TreeViewItem.TreeArrow.MouseOver.Checked.Fill" Color="#FF82DFFB"/>
-        <PathGeometry x:Key="TreeArrow" Figures="M0,0 L0,6 L6,0 z"/>
-        <SolidColorBrush x:Key="TreeViewItem.TreeArrow.Static.Fill" Color="#FFFFFFFF"/>
-        <SolidColorBrush x:Key="TreeViewItem.TreeArrow.Static.Stroke" Color="#FF818181"/>
-        <Style x:Key="ExpandCollapseToggleStyle" TargetType="{x:Type ToggleButton}">
-            <Setter Property="Focusable" Value="False"/>
-            <Setter Property="Width" Value="16"/>
-            <Setter Property="Height" Value="16"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type ToggleButton}">
-                        <Border Background="Transparent" Height="16" Padding="5,5,5,5" Width="16">
-                            <Path x:Name="ExpandPath" Data="{StaticResource TreeArrow}" Fill="{StaticResource TreeViewItem.TreeArrow.Static.Fill}" Stroke="{StaticResource TreeViewItem.TreeArrow.Static.Stroke}">
-                                <Path.RenderTransform>
-                                    <RotateTransform Angle="135" CenterY="3" CenterX="3"/>
-                                </Path.RenderTransform>
-                            </Path>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsChecked" Value="True">
-                                <Setter Property="RenderTransform" TargetName="ExpandPath">
-                                    <Setter.Value>
-                                        <RotateTransform Angle="180" CenterY="3" CenterX="3"/>
-                                    </Setter.Value>
-                                </Setter>
-                                <Setter Property="Fill" TargetName="ExpandPath" Value="{StaticResource TreeViewItem.TreeArrow.Static.Checked.Fill}"/>
-                                <Setter Property="Stroke" TargetName="ExpandPath" Value="{StaticResource TreeViewItem.TreeArrow.Static.Checked.Stroke}"/>
-                            </Trigger>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Stroke" TargetName="ExpandPath" Value="{StaticResource TreeViewItem.TreeArrow.MouseOver.Stroke}"/>
-                                <Setter Property="Fill" TargetName="ExpandPath" Value="{StaticResource TreeViewItem.TreeArrow.MouseOver.Fill}"/>
-                            </Trigger>
-                            <MultiTrigger>
-                                <MultiTrigger.Conditions>
-                                    <Condition Property="IsMouseOver" Value="True"/>
-                                    <Condition Property="IsChecked" Value="True"/>
-                                </MultiTrigger.Conditions>
-                                <Setter Property="Stroke" TargetName="ExpandPath" Value="{StaticResource TreeViewItem.TreeArrow.MouseOver.Checked.Stroke}"/>
-                                <Setter Property="Fill" TargetName="ExpandPath" Value="{StaticResource TreeViewItem.TreeArrow.MouseOver.Checked.Fill}"/>
-                            </MultiTrigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
         <Style TargetType="{x:Type TreeViewItem}">
             <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
             <Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
             <Setter Property="Padding" Value="1,0,0,0"/>
             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-            <Setter Property="FocusVisualStyle" Value="{StaticResource TreeViewItemFocusVisual}"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type TreeViewItem}">
@@ -142,35 +69,11 @@
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
-                            <ToggleButton x:Name="Expander" ClickMode="Press" IsChecked="{Binding IsExpanded, RelativeSource={RelativeSource TemplatedParent}}" Style="{StaticResource ExpandCollapseToggleStyle}"/>
                             <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.Column="1" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true">
                                 <ContentPresenter x:Name="PART_Header" ContentSource="Header" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
                             </Border>
                             <ItemsPresenter x:Name="ItemsHost" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1"/>
                         </Grid>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsExpanded" Value="false">
-                                <Setter Property="Visibility" TargetName="ItemsHost" Value="Collapsed"/>
-                            </Trigger>
-                            <Trigger Property="HasItems" Value="false">
-                                <Setter Property="Visibility" TargetName="Expander" Value="Hidden"/>
-                            </Trigger>
-                            <Trigger Property="IsSelected" Value="true">
-                                <Setter Property="Background" TargetName="Bd" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
-                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
-                            </Trigger>
-                            <MultiTrigger>
-                                <MultiTrigger.Conditions>
-                                    <Condition Property="IsSelected" Value="true"/>
-                                    <Condition Property="IsSelectionActive" Value="false"/>
-                                </MultiTrigger.Conditions>
-                                <Setter Property="Background" TargetName="Bd" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
-                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}}"/>
-                            </MultiTrigger>
-                            <Trigger Property="IsEnabled" Value="false">
-                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -186,6 +89,14 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+        <!--左侧导航栏一级菜单样式-->
+        <Style x:Key="ExpanderImageToggleButtonStyle" TargetType="controls:ImageToggleButton">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+        </Style>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -193,7 +104,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Border Grid.ColumnSpan="2" Background="#FF45B9F1">
@@ -201,7 +112,7 @@
         </Border>
         <Grid Grid.Row="1">
             <Grid.Background>
-                <ImageBrush ImageSource="/Resource;component/Images/Home/zjmleftbj.png"/>
+                <ImageBrush ImageSource="/Resource;component/Images/Home/zjmleftbj.png" Stretch="Fill"/>
             </Grid.Background>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -210,14 +121,12 @@
             </Grid.RowDefinitions>
             <Image Source="/Resource;component/Images/Home/yh_tx1.png" Width="27" Height="24" HorizontalAlignment="Left" Margin="20,0,0,0"/>
             <TextBlock Grid.Row="1" Text="Bean Bag Trading(Pvt)Ltd" Margin="18,0,0,0"/>
-            <TreeView Grid.Row="2" Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Hidden">
-                <Expander IsExpanded="{Binding IsSelected,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=TreeViewItem}}" Style="{DynamicResource ExpanderStyle1}">
+            <TreeView Grid.Row="2" Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Hidden" >
+                <Expander IsExpanded="{Binding IsSelected,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=TreeViewItem}}" Style="{DynamicResource LeftExpanderStyle}">
                     <Expander.Resources>
-                        <Style TargetType="controls:ImageToggleButton">
-                            <Setter Property="NormalImage" Value="/Resource;component/Images/Home/zjmleftbj.png"/>
-                            <Setter Property="MouseOverImage" Value="/Resource;component/Images/Home/zjmleftbj.png"/>
-                            <Setter Property="Height" Value="30"/>
-                            <Setter Property="Width" Value="200"/>
+                        <Style TargetType="controls:ImageToggleButton" BasedOn="{StaticResource ExpanderImageToggleButtonStyle}">
+                            <Setter Property="NormalImage" Value="/Resource;component/Images/Home/Contentbg.jpg"/>
+                            <Setter Property="MouseOverImage" Value="/Resource;component/Images/Home/Contentbg.jpg"/>
                         </Style>
                     </Expander.Resources>
                     <StackPanel>
@@ -233,17 +142,25 @@
                                       MouseOverImage="/Resource;component/Images/LogIn/login_ok2.png"/>
                     </StackPanel>
                 </Expander>
-                <Expander IsExpanded="{Binding IsSelected,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=TreeViewItem}}">
-                    <Button Height="100"/>
-                </Expander>
-                <Expander IsExpanded="{Binding IsSelected,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=TreeViewItem}}">
-                    <Button Height="100"/>
-                </Expander>
-                <Expander IsExpanded="{Binding IsSelected,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=TreeViewItem}}">
-                    <Button Height="100"/>
-                </Expander>
-                <Expander IsExpanded="{Binding IsSelected,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=TreeViewItem}}">
-                    <Button Height="100"/>
+                <Expander IsExpanded="{Binding IsSelected,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=TreeViewItem}}" Style="{DynamicResource LeftExpanderStyle}">
+                    <Expander.Resources>
+                        <Style TargetType="controls:ImageToggleButton" BasedOn="{StaticResource ExpanderImageToggleButtonStyle}">
+                            <Setter Property="NormalImage" Value="/Resource;component/Images/Home/Contentbg.jpg"/>
+                            <Setter Property="MouseOverImage" Value="/Resource;component/Images/Home/Contentbg.jpg"/>
+                        </Style>
+                    </Expander.Resources>
+                    <StackPanel>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/LogIn/login_ok1.png" Width="200"
+                                      MouseOverImage="/Resource;component/Images/LogIn/login_ok2.png"/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/LogIn/login_ok1.png" Width="200"
+                                      MouseOverImage="/Resource;component/Images/LogIn/login_ok2.png"/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/LogIn/login_ok1.png" Width="200"
+                                      MouseOverImage="/Resource;component/Images/LogIn/login_ok2.png"/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/LogIn/login_ok1.png" Width="200"
+                                      MouseOverImage="/Resource;component/Images/LogIn/login_ok2.png"/>
+                        <controls:ImageButton NormalImage="/Resource;component/Images/LogIn/login_ok1.png" Width="200"
+                                      MouseOverImage="/Resource;component/Images/LogIn/login_ok2.png"/>
+                    </StackPanel>
                 </Expander>
             </TreeView>
         </Grid>
