@@ -4,13 +4,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TaxInvoice.View.Content"
-             mc:Ignorable="d" 
+             mc:Ignorable="d" Background="#FFFEFEFE"
              d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Resource;component/Style/TextBlockStyle.xaml"/>
                 <ResourceDictionary Source="/Resource;component/Style/ButtonStyle.xaml"/>
+                <ResourceDictionary Source="/Resource;component/Style/TextBoxStyle.xaml"/>
+                <ResourceDictionary Source="/TaxInvoice;component/Style/Colors.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
@@ -26,7 +28,11 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <TextBlock Text="Fiscal Tax Invoice" Foreground="#FFCE2B2A" Style="{StaticResource H_C_ContentTextBlockStyle}"/>
+            <TextBlock Text="Fiscal Tax Invoice" Foreground="{StaticResource DarkRedForground}" Style="{StaticResource H_C_ContentTextBlockStyle}"/>
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <TextBlock Text="Order No." Style="{StaticResource BaseContentTextBlockStyle}" Foreground="{StaticResource LightBlueForground}"/>
+                <TextBox Width="100" BorderThickness="0,0,0,1" Style="{StaticResource NoStateTextBoxStyle}" Margin="0,0,0,-5"/>
+            </StackPanel>
         </Grid>
     </ScrollViewer>
 </UserControl>

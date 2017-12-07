@@ -35,8 +35,6 @@ D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\TaxInvoice.exe
 D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\TaxInvoice.pdb
 D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\bin\Debug\Newtonsoft.Json.dll
 D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\bin\Debug\Newtonsoft.Json.xml
-D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\HomeView\HomeView.g.cs
-D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\HomeView\HomeView.baml
 E:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\TaxInvoice.csprojResolveAssemblyReference.cache
 E:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\MainWindow.g.cs
 E:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Home\HomeView.g.cs
@@ -79,3 +77,8 @@ E:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\TaxInvoice.exe
 E:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\TaxInvoice.pdb
 E:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Content\IssuingView.g.cs
 E:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Content\IssuingView.baml
+D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Content\IssuingView.g.cs
+D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Home\HomeView.g.cs
+D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\Style\Colors.baml
+D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Content\IssuingView.baml
+D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Home\HomeView.baml

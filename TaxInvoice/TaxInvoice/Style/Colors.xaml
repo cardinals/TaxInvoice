@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:TaxInvoice.Style">
+    <!--浅蓝色前景色-->
+    <SolidColorBrush x:Key="LightBlueForground" Color="#FF0E6EDB"/>
+    <!--深红前景色-->
+    <SolidColorBrush x:Key="DarkRedForground" Color="#FFCE2B2A"/>
+</ResourceDictionary>
