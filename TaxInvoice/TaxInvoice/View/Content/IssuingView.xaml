@@ -5,19 +5,25 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TaxInvoice.View.Content"
              mc:Ignorable="d" Background="#FFFEFEFE"
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="1000" d:DesignWidth="600">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Resource;component/Style/TextBlockStyle.xaml"/>
                 <ResourceDictionary Source="/Resource;component/Style/ButtonStyle.xaml"/>
                 <ResourceDictionary Source="/Resource;component/Style/TextBoxStyle.xaml"/>
-                <ResourceDictionary Source="/TaxInvoice;component/Style/Colors.xaml"/>
+                <ResourceDictionary Source="/Resource;component/Style/Colors.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            <!--GroupBox样式-->
+            <Style x:Key="InvoicGroupBoxStyle" TargetType="GroupBox">
+                <Setter Property="FontSize" Value="{StaticResource Header1FontSize}"/>
+                <Setter Property="Foreground" Value="{StaticResource LightBlueForground}"/>
+                <Setter Property="BorderThickness" Value="2"/>
+            </Style>
         </ResourceDictionary>
     </UserControl.Resources>
     <ScrollViewer>
-        <Grid>
+        <Grid Margin="20,20,20,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -28,11 +34,79 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <TextBlock Text="Fiscal Tax Invoice" Foreground="{StaticResource DarkRedForground}" Style="{StaticResource H_C_ContentTextBlockStyle}"/>
+            <TextBlock Text="Fiscal Tax Invoice" Foreground="{StaticResource DarkRedForground}" FontWeight="Bold" Style="{StaticResource H_C_ContentTbkStyle}"/>
             <StackPanel Grid.Row="1" Orientation="Horizontal">
-                <TextBlock Text="Order No." Style="{StaticResource BaseContentTextBlockStyle}" Foreground="{StaticResource LightBlueForground}"/>
-                <TextBox Width="100" BorderThickness="0,0,0,1" Style="{StaticResource NoStateTextBoxStyle}" Margin="0,0,0,-5"/>
+                <TextBlock Text="Order No." Style="{StaticResource BaseContentTbkStyle}" Foreground="{StaticResource LightBlueForground}"/>
+                <TextBox Width="200" BorderThickness="0,0,0,1" Style="{StaticResource NoStateTbStyle}" Margin="10,0,0,-5"/>
             </StackPanel>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <GroupBox Header="Buyer" Style="{StaticResource InvoicGroupBoxStyle}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Name:" Style="{StaticResource M_10_ContentTbkStyle}"/>
+                        <TextBox Grid.Column="1" Style="{StaticResource M_3_P_3_TbStyle}"/>
+                        <TextBlock Grid.Row="1" Text="BPN:" Style="{StaticResource M_10_ContentTbkStyle}"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource M_3_P_3_TbStyle}"/>
+                        <TextBlock Grid.Row="2" Text="VAT:" Style="{StaticResource M_10_ContentTbkStyle}"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource M_3_P_3_TbStyle}"/>
+                        <TextBlock Grid.Row="3" Text="Addr:" Style="{StaticResource M_10_ContentTbkStyle}"/>
+                        <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource M_3_P_3_TbStyle}"/>
+                        <TextBlock Grid.Row="4" Text="Tel:" Style="{StaticResource M_10_ContentTbkStyle}"/>
+                        <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource M_3_P_3_TbStyle}"/>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Grid.Column="1" Header="Invoice" Style="{StaticResource InvoicGroupBoxStyle}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Invoice Categroy:" Style="{StaticResource M_10_ContentTbkStyle}"/>
+                        <TextBlock Grid.Column="1" Text="Fiscal Invoice" Style="{StaticResource M_10_F_B_ContentTbkStyle}"/>
+                        <TextBlock Grid.Row="1" Text="Invoice Code:" Style="{StaticResource M_10_ContentTbkStyle}"/>
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="000116120020" Style="{StaticResource M_10_F_Dr_ContentTbkStyle}"/>
+                        <TextBlock Grid.Row="2" Text="Invoice No:" Style="{StaticResource M_10_ContentTbkStyle}"/>
+                        <TextBlock Grid.Row="2" Grid.Column="1" Style="{StaticResource M_10_F_B_ContentTbkStyle}"/>
+                        <TextBlock Grid.Row="3" Text="Date:" Style="{StaticResource M_10_ContentTbkStyle}"/>
+                        <TextBlock Grid.Row="3" Grid.Column="1" Text="08/12/2017" Style="{StaticResource M_10_F_B_ContentTbkStyle}"/>
+                    </Grid>
+                </GroupBox>
+            </Grid>
+            <StackPanel Grid.Row="3" Orientation="Horizontal">
+                <TextBlock Text="BarCode:" Style="{StaticResource M_10_F_Lb_ContentTbkStyle}"/>
+                <TextBox Width="200" Style="{StaticResource M_3_P_3_TbStyle}"/>
+            </StackPanel>
+            <DataGrid Grid.Row="4" Height="300">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Items" Width="*"/>
+                    <DataGridTextColumn Header="Qty" Width="*"/>
+                    <DataGridTextColumn Header="Price" Width="*"/>
+                    <DataGridTextColumn Header="Tax Rate" Width="*"/>
+                    <DataGridTextColumn Header="Discount Rate" Width="*"/>
+                    <DataGridTextColumn Header="Amount" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
         </Grid>
     </ScrollViewer>
 </UserControl>

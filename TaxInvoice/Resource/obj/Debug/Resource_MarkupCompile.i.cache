@@ -4,17 +4,17 @@
 library
 C#
 .cs
-E:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\
+D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\
 Resource
 none
 false
 DEBUG;TRACE
 
-4-1115375934
+6-1348220378
 
-5780809754
+51897293310
 13-1142990016
-Style\FontSizeStyle.xaml;Style\ButtonStyle.xaml;Style\TextBoxStyle.xaml;Style\TextBlockStyle.xaml;
+Style\DataGridStyle.xaml;Style\Colors.xaml;Style\FontSizeStyle.xaml;Style\ButtonStyle.xaml;Style\TextBoxStyle.xaml;Style\TextBlockStyle.xaml;
 
-True
+False
 

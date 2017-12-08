@@ -21,3 +21,5 @@ E:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.csproj.CoreCompileIn
 E:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.dll
 E:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.pdb
 D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Style\TextBoxStyle.baml
+D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Style\Colors.baml
+D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Style\DataGridStyle.baml

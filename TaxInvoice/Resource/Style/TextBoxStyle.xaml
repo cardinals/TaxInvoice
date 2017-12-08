@@ -5,7 +5,7 @@
         <ResourceDictionary Source="/Resource;component/Style/FontSizeStyle.xaml"/>
     </ResourceDictionary.MergedDictionaries>
     <!--无状态变化的TexBox样式-->
-    <Style x:Key="NoStateTextBoxStyle" TargetType="{x:Type TextBox}">
+    <Style x:Key="NoStateTbStyle" TargetType="{x:Type TextBox}">
         <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
         <Setter Property="BorderBrush" Value="Black"/>
         <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
@@ -40,5 +40,10 @@
                 <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
             </MultiTrigger>
         </Style.Triggers>
+    </Style>
+    <!--margin和padding设置之后的样式-->
+    <Style x:Key="M_3_P_3_TbStyle" TargetType="TextBox" BasedOn="{StaticResource NoStateTbStyle}">
+        <Setter Property="Margin" Value="0,3"/>
+        <Setter Property="Padding" Value="0,3"/>
     </Style>
 </ResourceDictionary>

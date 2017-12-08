@@ -59,13 +59,13 @@
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Text="BPN:" Style="{StaticResource H_R_ContentTextBlockStyle}"/>
+                <TextBlock Text="BPN:" Style="{StaticResource H_R_ContentTbkStyle}"/>
                 <Image Grid.Row="0" Grid.Column="1" Source="/Resource;component/Images/LogIn/login_edit2.png" Style="{StaticResource LogInImageStyle}"/>
                 <TextBox Grid.Column="1"  Style="{StaticResource LogInTextBoxStyle}"/>
-                <TextBlock Grid.Row="1" Text="Username:" Style="{StaticResource H_R_ContentTextBlockStyle}"/>
+                <TextBlock Grid.Row="1" Text="Username:" Style="{StaticResource H_R_ContentTbkStyle}"/>
                 <Image Grid.Row="1" Grid.Column="1" Source="/Resource;component/Images/LogIn/login_edit2.png" Style="{StaticResource LogInImageStyle}"/>
                 <ComboBox Grid.Row="1" Grid.Column="1" Style="{StaticResource LogInComboBoxStyle}" IsEditable="True"/>
-                <TextBlock Grid.Row="2" Text="Password:" Style="{StaticResource H_R_ContentTextBlockStyle}"/>
+                <TextBlock Grid.Row="2" Text="Password:" Style="{StaticResource H_R_ContentTbkStyle}"/>
                 <Image Grid.Row="2" Grid.Column="1" Source="/Resource;component/Images/LogIn/login_edit3.png" Style="{StaticResource LogInImageStyle}"/>
                 <TextBox Grid.Row="2" Grid.Column="1"  Style="{StaticResource LogInTextBoxStyle}"/>
             </Grid>

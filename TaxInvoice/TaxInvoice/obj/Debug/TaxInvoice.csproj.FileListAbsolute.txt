@@ -79,6 +79,5 @@ E:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Content\IssuingView.g.
 E:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Content\IssuingView.baml
 D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Content\IssuingView.g.cs
 D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Home\HomeView.g.cs
-D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\Style\Colors.baml
 D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Content\IssuingView.baml
 D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Home\HomeView.baml
