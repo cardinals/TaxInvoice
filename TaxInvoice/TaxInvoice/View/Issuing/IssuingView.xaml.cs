@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TaxInvoice.View.Content
+namespace TaxInvoice.View.Issuing
 {
     /// <summary>
     /// IssuingView.xaml 的交互逻辑

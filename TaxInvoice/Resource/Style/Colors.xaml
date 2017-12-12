@@ -1,7 +1,14 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <!--浅蓝色前景色-->
-    <SolidColorBrush x:Key="LightBlueForground" Color="#FF0E6EDB"/>
+    <Color x:Key="LightBlueForground.Color">#FF0E6EDB</Color>
+    <!--浅蓝色前景色-->
+    <SolidColorBrush x:Key="LightBlueForground" Color="{StaticResource LightBlueForground.Color}"/>
     <!--深红前景色-->
     <SolidColorBrush x:Key="DarkRedForground" Color="#FFCE2B2A"/>
+
+    <!--深红前景色-->
+    <SolidColorBrush x:Key="Button.BorderBrush.Normal" Color="#FF114D6D"/>
+    <!--深红前景色-->
+    <SolidColorBrush x:Key="Button.Background.Normal" Color="{StaticResource LightBlueForground.Color}"/>
 </ResourceDictionary>

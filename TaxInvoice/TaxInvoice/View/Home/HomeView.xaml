@@ -8,20 +8,24 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="600">
     <Window.Resources>
-        <Style x:Key="LeftExpanderStyle" TargetType="{x:Type Expander}">
-            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-            <Setter Property="VerticalContentAlignment" Value="Stretch"/>
-            <Setter Property="BorderBrush" Value="Transparent"/>
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Padding" Value="0"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Expander}">
-                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="3" SnapsToDevicePixels="true">
-                            <DockPanel>
-                                <controls:ImageToggleButton x:Name="HeaderSite" ContentTemplate="{TemplateBinding HeaderTemplate}"
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resource;component/Style/TextBlockStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="LeftExpanderStyle" TargetType="{x:Type Expander}">
+                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+                <Setter Property="BorderBrush" Value="Transparent"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Expander}">
+                            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="3" SnapsToDevicePixels="true">
+                                <DockPanel>
+                                    <controls:ImageToggleButton x:Name="HeaderSite" ContentTemplate="{TemplateBinding HeaderTemplate}"
                                               ContentTemplateSelector="{TemplateBinding HeaderTemplateSelector}" 
                                               Content="{TemplateBinding Header}" 
                                               DockPanel.Dock="Top"
@@ -35,73 +39,75 @@
                                               IsChecked="{Binding IsExpanded, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" 
                                               MinWidth="0" MinHeight="0" Padding="{TemplateBinding Padding}" 
                                               VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                                <ContentPresenter x:Name="ExpandSite" DockPanel.Dock="Bottom" Focusable="false" 
+                                    <ContentPresenter x:Name="ExpandSite" DockPanel.Dock="Bottom" Focusable="false" 
                                                   HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
                                                   Margin="{TemplateBinding Padding}" Visibility="Collapsed" 
                                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                            </DockPanel>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsExpanded" Value="true">
-                                <Setter Property="Visibility" TargetName="ExpandSite" Value="Visible"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Style TargetType="{x:Type TreeViewItem}">
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-            <Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
-            <Setter Property="Padding" Value="1,0,0,0"/>
-            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type TreeViewItem}">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.Column="1" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true">
-                                <ContentPresenter x:Name="PART_Header" ContentSource="Header" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                </DockPanel>
                             </Border>
-                            <ItemsPresenter x:Name="ItemsHost" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1"/>
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-            <Style.Triggers>
-                <Trigger Property="VirtualizingPanel.IsVirtualizing" Value="true">
-                    <Setter Property="ItemsPanel">
-                        <Setter.Value>
-                            <ItemsPanelTemplate>
-                                <VirtualizingStackPanel/>
-                            </ItemsPanelTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-        <!--左侧导航栏一级菜单样式-->
-        <Style x:Key="ExpanderImageToggleButtonStyle" TargetType="controls:ImageToggleButton">
-            <Setter Property="Width" Value="202"/>
-            <Setter Property="Height" Value="40"/>
-            <Setter Property="Padding" Value="0"/>
-            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-            <Setter Property="VerticalAlignment" Value="Stretch"/>
-        </Style>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsExpanded" Value="true">
+                                    <Setter Property="Visibility" TargetName="ExpandSite" Value="Visible"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style TargetType="{x:Type TreeViewItem}">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                <Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+                <Setter Property="Padding" Value="1,0,0,0"/>
+                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type TreeViewItem}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.Column="1" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true">
+                                    <ContentPresenter x:Name="PART_Header" ContentSource="Header" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                </Border>
+                                <ItemsPresenter x:Name="ItemsHost" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="VirtualizingPanel.IsVirtualizing" Value="true">
+                        <Setter Property="ItemsPanel">
+                            <Setter.Value>
+                                <ItemsPanelTemplate>
+                                    <VirtualizingStackPanel/>
+                                </ItemsPanelTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            <!--左侧导航栏一级菜单样式-->
+            <Style x:Key="ExpanderImageToggleButtonStyle" TargetType="controls:ImageToggleButton">
+                <Setter Property="Width" Value="202"/>
+                <Setter Property="Height" Value="40"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                <Setter Property="VerticalAlignment" Value="Stretch"/>
+            </Style>
+        </ResourceDictionary>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -240,7 +246,18 @@
             <Grid.Background>
                 <ImageBrush ImageSource="/Resource;component/Images/Home/Contentbg.jpg"/>
             </Grid.Background>
-            <Frame NavigationUIVisibility="Hidden" Source="/TaxInvoice;component/View/Content/IssuingView.xaml"/>
+            <Frame NavigationUIVisibility="Hidden" Source="/TaxInvoice;component/View/Issuing/IssuingView.xaml"/>
+        </Grid>
+        <Grid Grid.Row="2" Grid.ColumnSpan="2" Height="30" Background="#FFF0F0F0">
+            <TextBlock Style="{StaticResource Little_FZ_TbkStyle}" Margin="100,0,0,0"><Run Text="Offline Issued Qty:"/></TextBlock>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,100,0">
+                <Image Source="/Resource;component/Images/Home/offline.png" Margin="0,3"/>
+                <TextBlock Text="Offline" Style="{StaticResource Little_FZ_TbkStyle}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,100,0">
+                <Image Source="/Resource;component/Images/Home/online.png" Margin="0,3"/>
+                <TextBlock Text="Online" Style="{StaticResource Little_FZ_TbkStyle}"/>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>

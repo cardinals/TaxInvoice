@@ -85,7 +85,7 @@
     <Compile Include="ViewModel\LogIn\LogInViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
-    <Compile Include="View\Content\IssuingView.xaml.cs">
+    <Compile Include="View\Issuing\IssuingView.xaml.cs">
       <DependentUpon>IssuingView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Home\HomeView.xaml.cs">
@@ -106,7 +106,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\Content\IssuingView.xaml">
+    <Page Include="View\Issuing\IssuingView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

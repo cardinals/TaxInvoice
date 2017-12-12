@@ -35,4 +35,9 @@
     <Style x:Key="M_10_F_Lb_ContentTbkStyle" TargetType="TextBlock" BasedOn="{StaticResource M_10_ContentTbkStyle}">
         <Setter Property="Foreground" Value="{StaticResource LightBlueForground}"/>
     </Style>
+
+    <!--基本的文本样式-->
+    <Style x:Key="Little_FZ_TbkStyle" TargetType="TextBlock" BasedOn="{StaticResource M_10_ContentTbkStyle}">
+        <Setter Property="FontSize" Value="{StaticResource LittleFontSize}"/>
+    </Style>
 </ResourceDictionary>

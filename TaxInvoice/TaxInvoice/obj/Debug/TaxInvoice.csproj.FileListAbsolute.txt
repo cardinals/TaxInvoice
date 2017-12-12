@@ -77,7 +77,8 @@ E:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\TaxInvoice.exe
 E:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\TaxInvoice.pdb
 E:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Content\IssuingView.g.cs
 E:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Content\IssuingView.baml
-D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Content\IssuingView.g.cs
 D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Home\HomeView.g.cs
-D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Content\IssuingView.baml
 D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Home\HomeView.baml
+D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Issuing\IssuingView.g.cs
+D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Issuing\IssuingView.baml
+D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\TaxInvoice.csproj.CoreCompileInputs.cache
