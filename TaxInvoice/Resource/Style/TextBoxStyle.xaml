@@ -3,6 +3,7 @@
                     xmlns:local="clr-namespace:Resource">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Resource;component/Style/FontSizeStyle.xaml"/>
+        <ResourceDictionary Source="/Resource;component/Style/Colors.xaml"/>
     </ResourceDictionary.MergedDictionaries>
     <!--无状态变化的TexBox样式-->
     <Style x:Key="NoStateTbStyle" TargetType="{x:Type TextBox}">
@@ -45,5 +46,21 @@
     <Style x:Key="M_3_P_3_TbStyle" TargetType="TextBox" BasedOn="{StaticResource NoStateTbStyle}">
         <Setter Property="Margin" Value="0,3"/>
         <Setter Property="Padding" Value="0,3"/>
+    </Style>
+    <!--只读textbox的样式-->
+    <Style x:Key="NoEditTbStyle" TargetType="TextBox" BasedOn="{StaticResource NoStateTbStyle}">
+        <Setter Property="Margin" Value="0,3"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="IsReadOnly" Value="True"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+    <!--只读textbox的样式-->
+    <Style x:Key="NoEdit_P_3_TbStyle" TargetType="TextBox" BasedOn="{StaticResource NoEditTbStyle}">
+        <Setter Property="Padding" Value="0,3"/>
+    </Style>
+    <!--只读textbox的样式-->
+    <Style x:Key="NoEdit_Fg_TbStyle" TargetType="TextBox" BasedOn="{StaticResource NoEditTbStyle}">
+        <Setter Property="Padding" Value="0,3"/>
+        <Setter Property="Foreground" Value="{StaticResource DarkRedForground}"/>
     </Style>
 </ResourceDictionary>

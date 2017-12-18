@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:TaxInvoice.View.Home"
              xmlns:controls="clr-namespace:ControlLib.Controls;assembly=ControlLib"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="600">
+             d:DesignHeight="300" d:DesignWidth="600" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

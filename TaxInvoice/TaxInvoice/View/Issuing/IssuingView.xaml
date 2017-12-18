@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TaxInvoice.View.Issuing"
              mc:Ignorable="d" Background="#FFFEFEFE"
-             d:DesignHeight="1000" d:DesignWidth="600">
+             d:DesignHeight="1000" d:DesignWidth="840">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -20,66 +20,12 @@
                 <Setter Property="Foreground" Value="{StaticResource LightBlueForground}"/>
                 <Setter Property="BorderThickness" Value="2"/>
             </Style>
-            <Style x:Key="FocusVisual">
-                <Setter Property="Control.Template">
-                    <Setter.Value>
-                        <ControlTemplate>
-                            <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
-            <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
-            <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
-            <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
-            <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
-            <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
-            <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
-            <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
-            <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
-            <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
-            <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
-                <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
-                <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
-                <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
-                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-                <Setter Property="BorderThickness" Value="1"/>
-                <Setter Property="HorizontalContentAlignment" Value="Center"/>
-                <Setter Property="VerticalContentAlignment" Value="Center"/>
-                <Setter Property="Padding" Value="1"/>
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="{x:Type Button}">
-                            <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
-                                <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                            </Border>
-                            <ControlTemplate.Triggers>
-                                <Trigger Property="IsDefaulted" Value="true">
-                                    <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
-                                </Trigger>
-                                <Trigger Property="IsMouseOver" Value="true">
-                                    <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
-                                    <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
-                                </Trigger>
-                                <Trigger Property="IsPressed" Value="true">
-                                    <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
-                                    <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
-                                </Trigger>
-                                <Trigger Property="IsEnabled" Value="false">
-                                    <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
-                                    <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
-                                    <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
-                                </Trigger>
-                            </ControlTemplate.Triggers>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
         </ResourceDictionary>
     </UserControl.Resources>
-    <ScrollViewer>
-        <Grid Margin="20,20,20,0">
+    <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto">
+        <Grid Margin="20,20,20,0" Width="800" HorizontalAlignment="Center">
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -90,10 +36,12 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <TextBlock Text="Fiscal Tax Invoice" Foreground="{StaticResource DarkRedForground}" FontWeight="Bold" Style="{StaticResource H_C_ContentTbkStyle}"/>
+
             <StackPanel Grid.Row="1" Orientation="Horizontal">
                 <TextBlock Text="Order No." Style="{StaticResource BaseContentTbkStyle}" Foreground="{StaticResource LightBlueForground}"/>
                 <TextBox Width="200" BorderThickness="0,0,0,1" Style="{StaticResource NoStateTbStyle}" Margin="10,0,0,-5"/>
             </StackPanel>
+
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="3*"/>
@@ -138,20 +86,22 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Text="Invoice Categroy:" Style="{StaticResource M_10_ContentTbkStyle}"/>
-                        <TextBlock Grid.Column="1" Text="Fiscal Invoice" Style="{StaticResource M_10_F_B_ContentTbkStyle}"/>
+                        <TextBox Grid.Column="1" Text="Fiscal Invoice" Style="{StaticResource NoEdit_P_3_TbStyle}"/>
                         <TextBlock Grid.Row="1" Text="Invoice Code:" Style="{StaticResource M_10_ContentTbkStyle}"/>
-                        <TextBlock Grid.Row="1" Grid.Column="1" Text="000116120020" Style="{StaticResource M_10_F_Dr_ContentTbkStyle}"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Text="000116120020" Style="{StaticResource NoEdit_Fg_TbStyle}"/>
                         <TextBlock Grid.Row="2" Text="Invoice No:" Style="{StaticResource M_10_ContentTbkStyle}"/>
-                        <TextBlock Grid.Row="2" Grid.Column="1" Style="{StaticResource M_10_F_B_ContentTbkStyle}"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource NoEdit_P_3_TbStyle}"/>
                         <TextBlock Grid.Row="3" Text="Date:" Style="{StaticResource M_10_ContentTbkStyle}"/>
-                        <TextBlock Grid.Row="3" Grid.Column="1" Text="08/12/2017" Style="{StaticResource M_10_F_B_ContentTbkStyle}"/>
+                        <TextBox Grid.Row="3" Grid.Column="1" Text="08/12/2017" Style="{StaticResource NoEdit_P_3_TbStyle}"/>
                     </Grid>
                 </GroupBox>
             </Grid>
+
             <StackPanel Grid.Row="3" Orientation="Horizontal">
                 <TextBlock Text="BarCode:" Style="{StaticResource M_10_F_Lb_ContentTbkStyle}"/>
-                <TextBox Width="200" Style="{StaticResource M_3_P_3_TbStyle}"/>
+                <TextBox Width="200" Style="{StaticResource M_3_P_3_TbStyle}" Margin="10,3,0,5"/>
             </StackPanel>
+
             <DataGrid Grid.Row="4" Height="300">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Items" Width="*"/>
@@ -162,11 +112,73 @@
                     <DataGridTextColumn Header="Amount" Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <Grid Grid.Row="5">
-                <Button Style="{DynamicResource ButtonStyle1}"/>
-                <Button/>
-                <Button/>
+
+            <StackPanel Grid.Row="5" Margin="0,5" Orientation="Horizontal">
+                <Button Content="Add Item" Width="100" Height="30" Style="{StaticResource CommonButtonStyle}"/>
+                <Button Content="Add Item" Width="100" Height="30" Style="{StaticResource CommonButtonStyle}" Margin="10,0"/>
+                <Button Content="Add Item" Width="100" Height="30" Style="{StaticResource CommonButtonStyle}"/>
+                <TextBlock Text="Tax:" Style="{StaticResource BaseContentTbkStyle}" Margin="80,0,0,0"/>
+                <TextBlock Text="$0.00" Style="{StaticResource M_10_F_Dr_ContentTbkStyle}" Margin="5,0,0,0"/>
+                <TextBlock Text="Total Amount:" Style="{StaticResource BaseContentTbkStyle}" Margin="80,0,0,0"/>
+                <TextBlock Text="$0.00" Style="{StaticResource M_10_F_Dr_ContentTbkStyle}" Margin="5,0,0,0"/>
+            </StackPanel>
+
+            <Grid Grid.Row="6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <GroupBox Header="Seller" Style="{StaticResource InvoicGroupBoxStyle}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Name:" Style="{StaticResource M_10_ContentTbkStyle}"/>
+                        <TextBox Grid.Column="1" Style="{StaticResource NoEditTbStyle}"/>
+                        <TextBlock Grid.Row="1" Text="BPN:" Style="{StaticResource M_10_ContentTbkStyle}"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource NoEditTbStyle}"/>
+                        <TextBlock Grid.Row="2" Text="VAT:" Style="{StaticResource M_10_ContentTbkStyle}"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource NoEditTbStyle}"/>
+                        <TextBlock Grid.Row="3" Text="Addr:" Style="{StaticResource M_10_ContentTbkStyle}"/>
+                        <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource NoEditTbStyle}"/>
+                        <TextBlock Grid.Row="4" Text="Tel:" Style="{StaticResource M_10_ContentTbkStyle}"/>
+                        <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource NoEditTbStyle}"/>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Grid.Column="1" Header="Note" Style="{StaticResource InvoicGroupBoxStyle}">
+                    <TextBox TextWrapping="Wrap" AcceptsReturn="True"/>
+                </GroupBox>
             </Grid>
+            
+            <GroupBox Grid.Row="7" Header="Bank Info Of Seller" Style="{StaticResource InvoicGroupBoxStyle}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Name&amp;Addr" Style="{StaticResource M_10_ContentTbkStyle}"/>
+                    <TextBox Grid.Column="1" Style="{StaticResource M_3_P_3_TbStyle}"/>
+                    <TextBlock Grid.Row="1" Text="Account" Style="{StaticResource M_10_ContentTbkStyle}"/>
+                    <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource M_3_P_3_TbStyle}"/>
+                </Grid>
+            </GroupBox>
+            
+            <StackPanel Grid.Row="8" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,100,0">
+                <TextBlock Text="Cashier:" Style="{StaticResource M_10_F_Lb_ContentTbkStyle}"/>
+                <TextBlock Text="Cashier" Style="{StaticResource BaseContentTbkStyle}"/>
+            </StackPanel>
         </Grid>
     </ScrollViewer>
 </UserControl>
