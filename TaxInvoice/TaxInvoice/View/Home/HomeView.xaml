@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TaxInvoice.View.Home"
              xmlns:controls="clr-namespace:ControlLib.Controls;assembly=ControlLib"
-             mc:Ignorable="d" 
+             mc:Ignorable="d" DataContext="{Binding Path=Home ,Source={StaticResource Locator}}"
              d:DesignHeight="300" d:DesignWidth="600" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Window.Resources>
         <ResourceDictionary>
@@ -146,15 +146,17 @@
                         </Style>
                     </Expander.Resources>
                     <StackPanel>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/Issuing/cd_fptk1.png" Width="202" Height="37"
-                                      MouseOverImage="/Resource;component/Images/Issuing/cd_fptk2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/Issuing/c1.png" Width="200" Height="37"
-                                      MouseOverImage="/Resource;component/Images/Issuing/c2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/Issuing/d1.png" Width="200" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/Issuing/cd_fptk1.png" Width="202" Height="37"
+                                                   MouseOverImage="/Resource;component/Images/Issuing/cd_fptk2.png" Command="{Binding ClickCommand}" 
+                                                   CommandParameter="/TaxInvoice;component/View/Issuing/IssuingView.xaml"/>
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/Issuing/c1.png" Width="200" Height="37"
+                                                   MouseOverImage="/Resource;component/Images/Issuing/c2.png" Command="{Binding ClickCommand}"
+                                                   CommandParameter="/TaxInvoice;component/View/Issuing/EditNote.xaml"/>
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/Issuing/d1.png" Width="200" Height="37"
                                       MouseOverImage="/Resource;component/Images/Issuing/d2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/Issuing/cd_fpbd1.png" Width="200" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/Issuing/cd_fpbd1.png" Width="200" Height="37"
                                       MouseOverImage="/Resource;component/Images/Issuing/cd_fpbd2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/Issuing/cd_fpbl1.png" Width="200" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/Issuing/cd_fpbl1.png" Width="200" Height="37"
                                       MouseOverImage="/Resource;component/Images/Issuing/cd_fpbl2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
                     </StackPanel>
                 </Expander>
@@ -166,13 +168,13 @@
                         </Style>
                     </Expander.Resources>
                     <StackPanel>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/Management/cd_ylfpdr1.png" Width="202" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/Management/cd_ylfpdr1.png" Width="202" Height="37"
                                       MouseOverImage="/Resource;component/Images/Management/cd_ylfpdr1.png" Command="{Binding ClickCommand}" CommandParameter=""/>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/Management/cd_ylfpth1.png" Width="200" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/Management/cd_ylfpth1.png" Width="200" Height="37"
                                       MouseOverImage="/Resource;component/Images/Management/cd_ylfpth2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/Management/cd_kyfacl1.png" Width="200" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/Management/cd_kyfacl1.png" Width="200" Height="37"
                                       MouseOverImage="/Resource;component/Images/Management/cd_kyfacl2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/Management/fpgl_zdgp1.png" Width="200" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/Management/fpgl_zdgp1.png" Width="200" Height="37"
                                       MouseOverImage="/Resource;component/Images/Management/fpgl_zdgp2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
                     </StackPanel>
                 </Expander>
@@ -184,17 +186,17 @@
                         </Style>
                     </Expander.Resources>
                     <StackPanel>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/Statistics/jbxxwh1.png" Width="202" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/Statistics/jbxxwh1.png" Width="202" Height="37"
                                       MouseOverImage="/Resource;component/Images/Statistics/jbxxwh2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/Statistics/jyxm1.png" Width="200" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/Statistics/jyxm1.png" Width="200" Height="37"
                                       MouseOverImage="/Resource;component/Images/Statistics/jyxm2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/Statistics/cd_kjcx1.png" Width="200" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/Statistics/cd_kjcx1.png" Width="200" Height="37"
                                       MouseOverImage="/Resource;component/Images/Statistics/cd_kjcx2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/Statistics/cd_fpcy1.png" Width="200" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/Statistics/cd_fpcy1.png" Width="200" Height="37"
                                       MouseOverImage="/Resource;component/Images/Statistics/cd_fpcy2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/Statistics/spjxcbb1.png" Width="200" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/Statistics/spjxcbb1.png" Width="200" Height="37"
                                       MouseOverImage="/Resource;component/Images/Statistics/spjxcbb2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/Statistics/cxtj_khtj1.png" Width="200" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/Statistics/cxtj_khtj1.png" Width="200" Height="37"
                                       MouseOverImage="/Resource;component/Images/Statistics/cxtj_khtj2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
                     </StackPanel>
                 </Expander>
@@ -206,11 +208,11 @@
                         </Style>
                     </Expander.Resources>
                     <StackPanel>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/Product/spgl_spxx1.png" Width="202" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/Product/spgl_spxx1.png" Width="202" Height="37"
                                       MouseOverImage="/Resource;component/Images/Product/spgl_spxx2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/Product/spgl_spxg1.png" Width="200" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/Product/spgl_spxg1.png" Width="200" Height="37"
                                       MouseOverImage="/Resource;component/Images/Product/spgl_spxg2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/Product/spgl_spkc1.png" Width="200" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/Product/spgl_spkc1.png" Width="200" Height="37"
                                       MouseOverImage="/Resource;component/Images/Product/spgl_spkc2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
                     </StackPanel>
                 </Expander>
@@ -222,21 +224,21 @@
                         </Style>
                     </Expander.Resources>
                     <StackPanel>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/System/cd_kpxxwh1.png" Width="202" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/System/cd_kpxxwh1.png" Width="202" Height="37"
                                       MouseOverImage="/Resource;component/Images/System/cd_kpxxwh2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/System/cd_khxxwh1.png" Width="200" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/System/cd_khxxwh1.png" Width="200" Height="37"
                                       MouseOverImage="/Resource;component/Images/System/cd_khxxwh2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/System/xtgl_logo1.png" Width="200" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/System/xtgl_logo1.png" Width="200" Height="37"
                                       MouseOverImage="/Resource;component/Images/System/xtgl_logo2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/System/cd_kpygl1.png" Width="200" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/System/cd_kpygl1.png" Width="200" Height="37"
                                       MouseOverImage="/Resource;component/Images/System/cd_kpygl2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/System/cd_mmgl1.png" Width="200" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/System/cd_mmgl1.png" Width="200" Height="37"
                                       MouseOverImage="/Resource;component/Images/System/cd_mmgl2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/System/cd_sjbf1.png" Width="200" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/System/cd_sjbf1.png" Width="200" Height="37"
                                       MouseOverImage="/Resource;component/Images/System/cd_sjbf2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/System/cd_dyjsz1.png" Width="200" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/System/cd_dyjsz1.png" Width="200" Height="37"
                                       MouseOverImage="/Resource;component/Images/System/cd_dyjsz2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
-                        <controls:ImageButton NormalImage="/Resource;component/Images/System/cd_sjhf1.png" Width="200" Height="37"
+                        <controls:ImageRadioButton GroupName="navigation" NormalImage="/Resource;component/Images/System/cd_sjhf1.png" Width="200" Height="37"
                                       MouseOverImage="/Resource;component/Images/System/cd_sjhf2.png" Command="{Binding ClickCommand}" CommandParameter=""/>
                     </StackPanel>
                 </Expander>
@@ -246,7 +248,7 @@
             <Grid.Background>
                 <ImageBrush ImageSource="/Resource;component/Images/Home/Contentbg.jpg"/>
             </Grid.Background>
-            <Frame NavigationUIVisibility="Hidden" Source="/TaxInvoice;component/View/Issuing/IssuingView.xaml"/>
+            <Frame NavigationUIVisibility="Hidden" Source="{Binding Source}"/>
         </Grid>
         <Grid Grid.Row="2" Grid.ColumnSpan="2" Height="30" Background="#FFF0F0F0">
             <TextBlock Style="{StaticResource Little_FZ_TbkStyle}" Margin="100,0,0,0"><Run Text="Offline Issued Qty:"/></TextBlock>

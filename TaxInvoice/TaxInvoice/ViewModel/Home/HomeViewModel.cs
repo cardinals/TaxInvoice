@@ -17,6 +17,22 @@ namespace TaxInvoice.ViewModel.Home
     /// </summary>
     public class HomeViewModel : ViewModelBase
     {
+        #region 属性
+        /// <summary>
+        /// 获取或设置
+        /// </summary>
+        private Uri _source;
+        /// <summary>
+        /// 获取或设置
+        /// </summary>
+        public Uri Source
+        {
+            get { return _source; }
+            set { Set<Uri>(ref _source, value, "Source"); }
+        }
+
+        #endregion
+
         #region 命令
         /// <summary>
         /// 获取或设置
@@ -31,6 +47,10 @@ namespace TaxInvoice.ViewModel.Home
             {
                 return _clickCommand ?? (_clickCommand = new RelayCommand<object>(p =>
                 {
+                    if (p != null&&!string.IsNullOrWhiteSpace(p.ToString()))
+                    {
+                        Source = new Uri(p.ToString(), UriKind.RelativeOrAbsolute);
+                    }
                 }, a =>
                 {
                     return true;
@@ -39,5 +59,6 @@ namespace TaxInvoice.ViewModel.Home
         }
 
         #endregion
+
     }
 }

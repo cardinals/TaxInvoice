@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ControlLib.Document;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +27,7 @@ namespace ControlLib.Controls
 
         #region 属性
         /// <summary>
-        /// 正常是的图片
+        /// 正常时候的图片
         /// </summary>
         public ImageSource NormalImage
         {
@@ -35,8 +36,7 @@ namespace ControlLib.Controls
         }
 
         // Using a DependencyProperty as the backing store for NormalImage.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty NormalImageProperty =
-            DependencyProperty.Register("NormalImage", typeof(ImageSource), typeof(ImageButton), new PropertyMetadata(null));
+        public static readonly DependencyProperty NormalImageProperty = ImageButtonElement.NormalImageProperty.AddOwner(typeof(ImageButton));
         /// <summary>
         /// 鼠标滑过图片
         /// </summary>
@@ -47,8 +47,7 @@ namespace ControlLib.Controls
         }
 
         // Using a DependencyProperty as the backing store for MouseOverImage.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty MouseOverImageProperty =
-            DependencyProperty.Register("MouseOverImage", typeof(ImageSource), typeof(ImageButton), new PropertyMetadata(null));
+        public static readonly DependencyProperty MouseOverImageProperty = ImageButtonElement.MouseOverImageProperty.AddOwner(typeof(ImageButton));
         #endregion
     }
 }

@@ -83,8 +83,10 @@
     <Compile Include="Model\Common\HttpModel.cs" />
     <Compile Include="ViewModel\Home\HomeViewModel.cs" />
     <Compile Include="ViewModel\LogIn\LogInViewModel.cs" />
-    <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="View\Issuing\EditNote.xaml.cs">
+      <DependentUpon>EditNote.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Issuing\IssuingView.xaml.cs">
       <DependentUpon>IssuingView.xaml</DependentUpon>
     </Compile>
@@ -106,6 +108,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\Issuing\EditNote.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Issuing\IssuingView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

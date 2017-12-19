@@ -5,7 +5,7 @@
     <!--浅蓝色前景色-->
     <SolidColorBrush x:Key="LightBlueForground" Color="{StaticResource LightBlueForground.Color}"/>
     <!--深红前景色-->
-    <SolidColorBrush x:Key="DarkRedForground" Color="#FFCE2B2A"/>
+    <SolidColorBrush x:Key="DarkRedForground" Color="#FFFE2036"/>
 
     <!--按钮正常边框色-->
     <SolidColorBrush x:Key="Button.BorderBrush.Normal" Color="#FF114D6D"/>

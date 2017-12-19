@@ -46,10 +46,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\ImageButton.cs" />
+    <Compile Include="Controls\ImageRadioButton.cs" />
     <Compile Include="Controls\ImageToggleButton.cs" />
+    <Compile Include="Document\ImageButtonElement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Themes\RadioButtonStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\ToggleButtonStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

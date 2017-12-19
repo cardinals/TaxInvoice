@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TaxInvoice.View.Issuing"
+             xmlns:controls="clr-namespace:ControlLib.Controls;assembly=ControlLib"
              mc:Ignorable="d" Background="#FFFEFEFE"
              d:DesignHeight="1000" d:DesignWidth="840">
     <UserControl.Resources>
@@ -12,7 +13,6 @@
                 <ResourceDictionary Source="/Resource;component/Style/TextBlockStyle.xaml"/>
                 <ResourceDictionary Source="/Resource;component/Style/ButtonStyle.xaml"/>
                 <ResourceDictionary Source="/Resource;component/Style/TextBoxStyle.xaml"/>
-                <ResourceDictionary Source="/Resource;component/Style/Colors.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <!--GroupBox样式-->
             <Style x:Key="InvoicGroupBoxStyle" TargetType="GroupBox">
@@ -35,11 +35,12 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <TextBlock Text="Fiscal Tax Invoice" Foreground="{StaticResource DarkRedForground}" FontWeight="Bold" Style="{StaticResource H_C_ContentTbkStyle}"/>
-
+            <TextBlock Text="Fiscal Tax Invoice" Style="{StaticResource H_C_TitleTbkStyle}"/>
+            <controls:ImageButton NormalImage="/Resource;component/Images/Issuing/gj_kjbdy1.png" Width="76" Height="76" Grid.RowSpan="2" HorizontalAlignment="Right"
+                                      MouseOverImage="/Resource;component/Images/Issuing/gj_kjbdy2.png" />
             <StackPanel Grid.Row="1" Orientation="Horizontal">
                 <TextBlock Text="Order No." Style="{StaticResource BaseContentTbkStyle}" Foreground="{StaticResource LightBlueForground}"/>
-                <TextBox Width="200" BorderThickness="0,0,0,1" Style="{StaticResource NoStateTbStyle}" Margin="10,0,0,-5"/>
+                <TextBox Width="200" BorderThickness="0,0,0,1" Text="45646446545" Style="{StaticResource NoStateTbStyle}" VerticalAlignment="Bottom" Margin="10,0,0,8"/>
             </StackPanel>
 
             <Grid Grid.Row="2">

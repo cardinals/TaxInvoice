@@ -3,5 +3,6 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/ControlLib;component/Themes/ButtonStyle.xaml"/>
         <ResourceDictionary Source="/ControlLib;component/Themes/ToggleButtonStyle.xaml"/>
+        <ResourceDictionary Source="/ControlLib;component/Themes/RadioButtonStyle.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
