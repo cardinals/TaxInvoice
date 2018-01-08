@@ -20,7 +20,6 @@ D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Style\ButtonStyle.baml
 D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Style\TextBoxStyle.baml
 D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Style\TextBlockStyle.baml
 D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.g.resources
-D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.csproj.CoreCompileInputs.cache
 D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.dll
 D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.pdb
 D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.csprojResolveAssemblyReference.cache

@@ -79,8 +79,10 @@ D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\LogIn\LogInView.baml
 D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\TaxInvoice.g.resources
 D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\TaxInvoice.Properties.Resources.resources
 D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\TaxInvoice.csproj.GenerateResource.Cache
-D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\TaxInvoice.csproj.CoreCompileInputs.cache
 D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\TaxInvoice.exe
 D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\TaxInvoice.pdb
 D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Issuing\EditNote.g.cs
 D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Issuing\EditNote.baml
+D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\bin\Debug\MahApps.Metro.dll
+D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\bin\Debug\MahApps.Metro.pdb
+D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\bin\Debug\MahApps.Metro.xml
