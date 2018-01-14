@@ -106,6 +106,15 @@
             </Style>
         </ResourceDictionary>
     </Window.Resources>
+    <metro:MetroWindow.WindowButtonCommands>
+        <metro:WindowButtonCommands Template="{DynamicResource MahApps.Metro.Templates.WindowButtonCommands.Win10}" />
+    </metro:MetroWindow.WindowButtonCommands>
+
+    <metro:MetroWindow.IconTemplate>
+        <DataTemplate>
+            <Image Source="/Resource;component/Images/Home/yh_tx1.png"/>
+        </DataTemplate>
+    </metro:MetroWindow.IconTemplate>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
