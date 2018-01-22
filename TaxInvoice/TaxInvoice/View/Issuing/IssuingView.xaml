@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TaxInvoice.View.Issuing"
              xmlns:controls="clr-namespace:ControlLib.Controls;assembly=ControlLib"
+             DataContext="{Binding Path=Issuing ,Source={StaticResource Locator}}"
              mc:Ignorable="d" Background="#FFFEFEFE"
              d:DesignHeight="1000" d:DesignWidth="840">
     <UserControl.Resources>
@@ -13,6 +14,7 @@
                 <ResourceDictionary Source="/Resource;component/Style/TextBlockStyle.xaml"/>
                 <ResourceDictionary Source="/Resource;component/Style/ButtonStyle.xaml"/>
                 <ResourceDictionary Source="/Resource;component/Style/TextBoxStyle.xaml"/>
+                <ResourceDictionary Source="/Resource;component/Style/DataGridStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <!--GroupBox样式-->
             <Style x:Key="InvoicGroupBoxStyle" TargetType="GroupBox">
@@ -103,14 +105,14 @@
                 <TextBox Width="200" Style="{StaticResource M_3_P_3_TbStyle}" Margin="10,3,0,5"/>
             </StackPanel>
 
-            <DataGrid Grid.Row="4" Height="300">
+            <DataGrid Grid.Row="4" Height="300" ItemsSource="{Binding ProductItems}" Style="{StaticResource DataGridStyle}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Items" Width="*"/>
-                    <DataGridTextColumn Header="Qty" Width="*"/>
-                    <DataGridTextColumn Header="Price" Width="*"/>
-                    <DataGridTextColumn Header="Tax Rate" Width="*"/>
-                    <DataGridTextColumn Header="Discount Rate" Width="*"/>
-                    <DataGridTextColumn Header="Amount" Width="*"/>
+                    <DataGridTextColumn Header="Qty" Binding="{Binding CategroyCode}" Width="*"/>
+                    <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="*"/>
+                    <DataGridTextColumn Header="Tax Rate" Binding="{Binding Rate}" Width="*"/>
+                    <DataGridTextColumn Header="Discount Rate" Binding="{Binding Discount}" Width="*"/>
+                    <DataGridTextColumn Header="Amount" Binding="{Binding Amount}" Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
 

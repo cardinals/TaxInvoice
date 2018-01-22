@@ -23,3 +23,7 @@ D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.g.resources
 D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.dll
 D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.pdb
 D:\GitHub\TaxInvoice\TaxInvoice\Resource\obj\Debug\Resource.csprojResolveAssemblyReference.cache
+D:\GitHub\TaxInvoice\TaxInvoice\Resource\bin\Debug\MahApps.Metro.dll
+D:\GitHub\TaxInvoice\TaxInvoice\Resource\bin\Debug\System.Windows.Interactivity.dll
+D:\GitHub\TaxInvoice\TaxInvoice\Resource\bin\Debug\MahApps.Metro.pdb
+D:\GitHub\TaxInvoice\TaxInvoice\Resource\bin\Debug\MahApps.Metro.xml

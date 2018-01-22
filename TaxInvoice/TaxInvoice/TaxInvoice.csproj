@@ -85,7 +85,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\Common\HttpModel.cs" />
+    <Compile Include="Model\Common\ProductItem.cs" />
+    <Compile Include="Model\Common\TaxPayer.cs" />
     <Compile Include="ViewModel\Home\HomeViewModel.cs" />
+    <Compile Include="ViewModel\Issuing\IssuingViewModel.cs" />
     <Compile Include="ViewModel\LogIn\LogInViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\Issuing\EditNote.xaml.cs">

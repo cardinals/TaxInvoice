@@ -16,6 +16,7 @@ using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
 using TaxInvoice.ViewModel.Home;
+using TaxInvoice.ViewModel.Issuing;
 
 namespace TaxInvoice.ViewModel
 {
@@ -44,6 +45,7 @@ namespace TaxInvoice.ViewModel
             ////}
 
             SimpleIoc.Default.Register<HomeViewModel>();
+            SimpleIoc.Default.Register<IssuingViewModel>();
         }
 
         public HomeViewModel Home
@@ -53,7 +55,13 @@ namespace TaxInvoice.ViewModel
                 return ServiceLocator.Current.GetInstance<HomeViewModel>();
             }
         }
-
+        public IssuingViewModel Issuing
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<IssuingViewModel>();
+            }
+        }
         public static void Cleanup()
         {
             // TODO Clear the ViewModels
