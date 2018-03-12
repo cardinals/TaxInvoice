@@ -86,3 +86,4 @@ D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\View\Issuing\EditNote.baml
 D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\bin\Debug\MahApps.Metro.dll
 D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\bin\Debug\MahApps.Metro.pdb
 D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\bin\Debug\MahApps.Metro.xml
+D:\GitHub\TaxInvoice\TaxInvoice\TaxInvoice\obj\Debug\TaxInvoice.csproj.CoreCompileInputs.cache

@@ -24,3 +24,4 @@ D:\GitHub\TaxInvoice\TaxInvoice\ControlLib\obj\Debug\ControlLib.g.resources
 D:\GitHub\TaxInvoice\TaxInvoice\ControlLib\obj\Debug\ControlLib.dll
 D:\GitHub\TaxInvoice\TaxInvoice\ControlLib\obj\Debug\ControlLib.pdb
 D:\GitHub\TaxInvoice\TaxInvoice\ControlLib\obj\Debug\ControlLib.csprojResolveAssemblyReference.cache
+D:\GitHub\TaxInvoice\TaxInvoice\ControlLib\obj\Debug\ControlLib.csproj.CoreCompileInputs.cache
